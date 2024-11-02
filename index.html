@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Profile Template</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Reset & general styling */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f1f1f1;
+      color: #333;
+    }
+    /* Main container */
+    .container {
+      max-width: 1400px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    /* Left column styling */
+    .left-column {
+      flex: 1;
+      min-width: 300px;
+      max-width: 33%;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .profile-photo {
+      position: relative;
+      width: 80%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .profile-photo img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .profile-name {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: black;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .info p, .skills p, .languages p {
+
+      margin: 10px 0;
+     
+    }
+    .info p i{
+    padding-left: 15px;
+    }
+
+    .icon-text {
+      display: flex;
+      align-items: center;
+    }
+    .icon-text i {
+      margin-right: 8px;
+      color: teal;
+    }
+    .skills .skill, .languages .language {
+      margin-bottom: 10px;
+    }
+    .progress-bar {
+      background-color: #ddd;
+      border-radius: 8px;
+      height: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background-color: teal;
+      border-radius: 8px;
+      text-align: center;
+      color: white;
+      font-size: 12px;
+    }
+    /* Right column styling */
+    .right-column {
+      flex: 2;
+      min-width: 600px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-size: 24px;
+      color: teal;
+      margin-bottom: 15px;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: teal;
+      color: white;
+      margin-top: 20px;
+    }
+    footer i {
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Column -->
+    <div class="left-column">
+      <div class="profile-photo">
+        <img src="OIP.jpg" alt="Avatar">
+        <h2 class="profile-name">Ayesha Muttalib</h2>
+      </div>
+      <div class="info">
+        <p class="icon-text"><i class="fa fa-briefcase"></i> Mern Stack Developer</p>
+        <p class="icon-text"><i class="fa fa-home"></i> Karachi, Pakistan</p>
+        <p class="icon-text"><i class="fa fa-envelope"></i> ayeshamutallib007@gmail.com</p>
+        <p class="icon-text"><i class="fa fa-phone"></i> 03019326154</p>
+        <p class="icon-text"><i class="fa fa-location"></i> Alnoor Society Block 19 F.B Area</p>
+
+        <p class="icon-text">
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <a href="https://github.com/ayesha-muttalib123" target="_blank">GitHub</a>
+        </p>
+        <p class="icon-text">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+          <a href="https://linkedin.com/in/ayesha-muttalib" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+      
+      <div class="skills hidden" id="skills">
+        <h3>Skills</h3>
+        <div class="skill">
+          <p>NodeJS</p>
+          <div class="progress-bar"><div class="progress-bar-fill" style="width: 75%">60%</div></div>
+        </div>
+        <div class="skill">
+          <p>Express.js</p>
+          <div class="progress-bar"><div class="progress-bar-fill" style="width: 70%">60%</div></div>
+        </div>
+        <div class="skill">
+          <p>React</p>
+          <div class="progress-bar"><div class="progress-bar-fill" style="width: 60%">60%</div></div>
+        </div>
+        <div class="skill">
+          <p>MongoDB</p>
+          <div class="progress-bar"><div class="progress-bar-fill" style="width: 60%">65%</div></div>
+        </div>
+        <div class="skill">
+          <p>HTML/CSS</p>
+          <div class="progress-bar"><div class="progress-bar-fill" style="width: 90%">90%</div></div>
+        </div>
+        <div class="skill">
+          <p>JavaScript</p>
+          <div class="progress-bar"><div class="progress-bar-fill" style="width: 80%">60%</div></div>
+        </div>
+      </div>
+      <button id="buttonskills">Show Skills</button>
+    </div>
+ 
+    <!-- Right Column -->
+    <div class="right-column">
+      <div class="section">
+        <h3 class="section-title">Projects</h3>
+        <p><b>Real Estate</b></p>
+        <a href="https://github.com/ayesha-muttalib123/mern-estate" target="_blank">GitHub Link</a>
+        <br><br>
+        <p><b>Bookify (NodeJS)</b></p>
+        <a href="https://github.com/ayesha-muttalib123/Bookify" target="_blank">GitHub Link</a>
+        <br><br>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Employment</h3>
+      
+        <!-- Expo Bird, Karachi -->
+        <div class="job">
+          <p><strong>Frontend Developer</strong> - <strong>Expo Bird, Karachi</strong></p>
+          <p>Working as a Frontend Developer with React, HTML, CSS, and JavaScript technologies.</p>
+          <p><time datetime="2023-07">Jul 2023</time> - <time datetime="2023-12">Dec 2023</time></p>
+        </div>
+        
+        <br>
+      
+        <!-- Askari Technologies, Karachi -->
+        <div class="job">
+          <p><strong>Node.js Developer</strong> - <strong>Askari Technologies, Karachi</strong></p>
+          <p>Working as an API Developer with Node.js, Express, and MongoDB.</p>
+          <p><time datetime="2024-01">Jan 2024</time> - <time datetime="2024-07">Jul 2024</time></p>
+        </div>
+      
+      </div>
+      
+
+      <div class="section">
+        <h3 class="section-title">Education</h3>
+        <p><b>Bachelor's Degree in Computer Science</b> - University of Karachi</p>
+        <p>Sep 2019 - Jun 2023</p>
+        <br>
+        <p><b>College</b> - ST LAWRENCE GOVT DEGREE GIRLS COLLEGE</p>
+        <p>Sep 2018 - Jun 2019</p>
+       
+        <br>
+        <p><b>School</b> - Happy Palace Group Of Schools, Karachi</p>
+        <p>Sep 2010 - Jun 2018</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Connect with me on social media:</p>
+    <i class="fab fa-github" aria-hidden="true"></i>
+    <i class="fab fa-linkedin" aria-hidden="true"></i>
+    <i class="fab fa-instagram" aria-hidden="true"></i>
+  </footer>
+
+  <script src="app.js">
+   
+    
+  </script>
+
+</body>
+</html>
